@@ -13,21 +13,7 @@ layer {
     shuffle: true
   }
 }
-layer {
-  name: "data"
-  type: "HDF5Data"
-  top: "data"
-  top: "label"
-  include {
-    phase: TEST
-  }
-  hdf5_data_param {
-    source: "/home/data/test.list"
-    batch_size: 1
-    shuffle: true
-  }
-}
-#########################################
+
 ##layer 1
 layer {
   name: "conv1a"
@@ -604,8 +590,6 @@ layer {
   }
 }
 
-
-########################################
 #loss
 layer {
   name: "score_main"
